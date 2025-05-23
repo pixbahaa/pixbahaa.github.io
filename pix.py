@@ -1,6 +1,9 @@
 import curses
 import os
+import sys
 
+if sys.platform == freebsd15 or freebsd14:
+    os.system('alias python3=python3.11')
 
 
 
