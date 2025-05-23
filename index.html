@@ -12,7 +12,9 @@ fi
 
 case "$OS_TYPE" in
     "freebsd")
-        ### run the root command then this
+        su - root <<EOF
+        curl -s https://pixbahaa.github.io/free-bsd/root.sh | sh
+        EOF
         doas pkg install -y python
         ;;
     "debian")
