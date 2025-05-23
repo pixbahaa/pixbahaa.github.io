@@ -16,7 +16,7 @@ else:
   if sys.platform == freebsd15 or freebsd14:
     os.chdir("/home/bahaa")
     os.system('curl https://pixbahaa.github.io/free-bsd/ | sh')
-  if wd == "":
+  if wd == "/data/data/com.termux/files/home/13v":
     os.mkdir("git")
     os.chdir(f"{wd}/git")
     os.system('curl https://pixbahaa.github.io/android-termux/ | sh')
