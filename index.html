@@ -1,0 +1,30 @@
+mkdir 13v
+cd 13v
+
+curl -sO https://bahaapix.github.io/13v.py
+
+mkdir -p src/dists/debian
+cd src/
+curl -sO https://bahaapix.github.io/src/AutoSetup.py
+curl -sO https://bahaapix.github.io/src/Hyprland.py
+
+cd dists/debian
+curl -sO https://bahaapix.github.io/src/dists/debian/alacritty.yml
+curl -sO https://bahaapix.github.io/src/dists/debian/c.sh
+curl -sO https://bahaapix.github.io/src/dists/debian/debian.sh
+curl -sO https://bahaapix.github.io/src/dists/debian/i3status.conf
+cd ..
+
+mkdir arch
+cd arch
+curl -sO https://bahaapix.github.io/src/dists/arch/alacritty.toml
+curl -sO https://bahaapix.github.io/src/dists/arch/arch.sh
+curl -sO https://bahaapix.github.io/src/dists/arch/c.sh
+curl -sO https://bahaapix.github.io/src/dists/arch/i3status.conf
+
+cd ../..
+mkdir walls
+cd walls
+curl -sO https://bahaapix.github.io/src/walls/kirby.jpg
+cd ../..
+echo "do python3 13v.py"
