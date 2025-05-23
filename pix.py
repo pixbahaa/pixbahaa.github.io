@@ -6,7 +6,7 @@ import sys
 if sys.platform == freebsd15 or freebsd14:
     os.system('alias python3=python3.11')
 os.mkdir('src')
-wd = os.system('pwd', capture_output=True, text=True).stdout.strip()
+prwd = os.system('pwd', capture_output=True, text=True).stdout.strip()
 
 
 
@@ -57,8 +57,10 @@ def main(stdscr):
                 return "Hyprland"
 result = curses.wrapper(main)
 if result == "AutoSetup":
-    os.chdir('src')
+    os.chdir(f"{prwd}/src")
     os.system('curl -O https://pixbahaa.github.io/src/AutoSetup.py')
     os.system('python3 AutoSetup.py')
 elif result == "Hyprland":
-    os.system(python3 src/Hyprland.py')
+    os.chdir(f"{prwd}/src")
+    os.system('curl -O https://pixbahaa.github.io/src/Hyprland.py')
+    os.system('python3 Hyprland.py')
