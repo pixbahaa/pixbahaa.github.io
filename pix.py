@@ -1,6 +1,21 @@
 import curses
 import subprocess
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 menu = ["AutoSetup", "Hyprland", "Exit"]
 
 def draw_menu(stdscr, selected_row_idx):
