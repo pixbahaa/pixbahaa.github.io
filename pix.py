@@ -1,5 +1,5 @@
 import curses
-import subprocess
+import os
 
 
 
