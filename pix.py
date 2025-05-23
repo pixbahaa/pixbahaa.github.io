@@ -56,11 +56,10 @@ def main(stdscr):
             elif menu[selected_row_idx] == "Hyprland":
                 return "Hyprland"
 result = curses.wrapper(main)
+os.chdir(f"{prwd}/src")
 if result == "AutoSetup":
-    os.chdir(f"{prwd}/src")
     os.system('curl -O https://pixbahaa.github.io/src/AutoSetup.py')
     os.system('python3 AutoSetup.py')
 elif result == "Hyprland":
-    os.chdir(f"{prwd}/src")
     os.system('curl -O https://pixbahaa.github.io/src/Hyprland.py')
     os.system('python3 Hyprland.py')
