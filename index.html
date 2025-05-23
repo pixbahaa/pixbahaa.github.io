@@ -1,3 +1,32 @@
+#!/bin/sh
+
+OS_TYPE=""
+if [ -f /etc/os-release ]; then
+    . /etc/os-release
+    OS_TYPE=$ID
+elif [ "$(uname -s)" = "FreeBSD" ]; then
+    OS_TYPE="freebsd"
+else
+    exit 1
+fi
+
+case "$OS_TYPE" in
+    "freebsd")
+        ### run the root command then this
+        doas pkg install -y python
+        ;;
+    "debian")
+        sudo apt install -y python3 python3-pip
+        ;;
+    "arch")
+        sudo pacman -S --noconfirm python python-pip
+        ;;
+    *)
+        exit 1
+        ;;
+esac
+
+
 mkdir 13v
 cd 13v
 
