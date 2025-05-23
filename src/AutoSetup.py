@@ -1,8 +1,7 @@
-import subprocess as bash
 import os
   
-hos = bash.run(["cat", "/etc/hostname"], capture_output=True, text=True).stdout.strip()
-wd = bash.run(["pwd"], capture_output=True, text=True).stdout.strip()
+hos = os.system('cat /etc/hostname', capture_output=True, text=True).stdout.strip()
+wd = os.system('pwd', capture_output=True, text=True).stdout.strip()
 
 if hos == "debian":
 
