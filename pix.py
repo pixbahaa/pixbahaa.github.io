@@ -13,9 +13,6 @@ import os
 
 
 
-
-
-
 menu = ["AutoSetup", "Hyprland", "Exit"]
 
 def draw_menu(stdscr, selected_row_idx):
@@ -56,6 +53,6 @@ def main(stdscr):
                 return "Hyprland"
 result = curses.wrapper(main)
 if result == "AutoSetup":
-    subprocess.run(["python3", "src/AutoSetup.py"])
+    os.system('python3 src/AutoSetup.py')
 elif result == "Hyprland":
-    subprocess.run(["python3", "src/Hyprland.py"])
+    os.system(python3 src/Hyprland.py')
