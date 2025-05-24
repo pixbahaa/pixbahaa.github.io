@@ -9,7 +9,7 @@ sudo apt install xorg dwm suckless-tools feh alacritty pulseaudio pavucontrol tl
 mkdir -p .config/alacritty
 
 cp alacritty.yml .config/alacritty/
-echo "exec i3" > .xinitrc
+echo "exec dwm" > .xinitrc
 
 cd /tmp
 
