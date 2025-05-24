@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # 1) where the remote TUI lives:
-SCRIPT_URL="curl -s -O https://pixbahaa.github.io/pix.py"
+SCRIPT_URL="https://pixbahaa.github.io/pix.py"
 
 # 2) grab it into a temp file
 TMP="$(mktemp /tmp/stripttui.XXXX.py)"
