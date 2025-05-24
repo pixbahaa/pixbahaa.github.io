@@ -21,6 +21,6 @@ else:
     os.chdir("/data/data/com.termux/files/home")
     os.mkdir("git")
     os.chdir("/data/data/com.termux/files/home/git")
-    os.system('curl https://pixbahaa.github.io/android-termux/hi.sh | sh')
+    os.system('curl -s https://pixbahaa.github.io/android-termux/hi.sh | sh')
   else:
     print("bahaa support only android, freebsd, debian and Arch")
