@@ -3,7 +3,7 @@
 cd
 sudo pacman -Syu --noconfirm
 sudo pacman -S --noconfirm noto-fonts noto-fonts-emoji noto-fonts-extra ttf-noto-nerd
-sudo pacman -S --noconfirm xorg xorg-drivers xorg-xinit dwm alacritty dmenu base-devel zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting intel-ucode pulseaudio pavucontrol
+sudo pacman -S --noconfirm xorg xorg-drivers xorg-xinit dwm dmenu alacritty dmenu base-devel zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting intel-ucode pulseaudio pavucontrol
 sudo usermod -s /bin/zsh bahaa
 echo "source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> /home/bahaa/.zshrc
 echo "source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" >> /home/bahaa/.zshrc
