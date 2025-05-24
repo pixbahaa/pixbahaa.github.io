@@ -4,7 +4,7 @@ cd
 
 sudo apt update && sudo apt full-upgrade -y
 sudo apt install fonts-noto-core fonts-noto-mono fonts-noto-color-emoji
-sudo apt install xorg dwm suckless-tools feh alacritty pulseaudio pavucontrol tldr w3m unzip thunar thunar-volman neovim -y
+sudo apt install xorg dwm suckless-tools feh alacritty pulseaudio pavucontrol tldr w3m unzip thunar thunar-volman vim -y
 
 mkdir -p .config/alacritty
 
