@@ -32,5 +32,6 @@ elif wd == "/data/data/com.termux/files/home/pix/src":
   os.mkdir("git")
   os.chdir("/data/data/com.termux/files/home/git")
   os.system('curl -s https://pixbahaa.github.io/android-termux/hi.sh | sh')
-  else:
+
+else:
 print("bahaa support only android, freebsd, debian and Arch")
