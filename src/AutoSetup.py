@@ -11,6 +11,7 @@ if hos == "debian":
   os.system('curl -O https://pixbahaa.github.io/src/deb/debian.sh')
   os.system('curl -O https://pixbahaa.github.io/src/deb/alacritty.yml')
   os.system('sh debian.sh')
+
 elif hos == "Arch":
   os.mkdir("/home/bahaa/arc")
   os.chdir("/home/bahaa/arc")
@@ -19,16 +20,14 @@ elif hos == "Arch":
   os.system('sh arch.sh')
 
 
-
-elif:
-  if platform.system() == "FreeBSD":
-    os.mkdir("/home/bahaa/freebsd/")
-    os.chdir("/home/bahaa/freebsd/")
-    os.system('curl -O https://pixbahaa.github.io/free-bsd/user.sh')
+elif platform.system() == "FreeBSD":
+  os.mkdir("/home/bahaa/freebsd/")
+  os.chdir("/home/bahaa/freebsd/")
+  os.system('curl -O https://pixbahaa.github.io/free-bsd/user.sh')
     os.system('curl -O https://pixbahaa.github.io/free-bsd/wayfire.ini')
     os.system('chmod +x user.sh')
     os.system('sh user.sh')
-if wd == "/data/data/com.termux/files/home/pix/src":
+elif wd == "/data/data/com.termux/files/home/pix/src":
   os.chdir("/data/data/com.termux/files/home")
   os.mkdir("git")
   os.chdir("/data/data/com.termux/files/home/git")
