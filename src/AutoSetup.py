@@ -20,7 +20,7 @@ elif hos == "Arch":
 
 
 
-else:
+elif:
   if platform.system() == "FreeBSD":
     os.mkdir("/home/bahaa/freebsd/")
     os.chdir("/home/bahaa/freebsd/")
@@ -28,10 +28,10 @@ else:
     os.system('curl -O https://pixbahaa.github.io/free-bsd/wayfire.ini')
     os.system('chmod +x user.sh')
     os.system('sh user.sh')
-  if wd == "/data/data/com.termux/files/home/pix/src":
-    os.chdir("/data/data/com.termux/files/home")
-    os.mkdir("git")
-    os.chdir("/data/data/com.termux/files/home/git")
-    os.system('curl -s https://pixbahaa.github.io/android-termux/hi.sh | sh')
+if wd == "/data/data/com.termux/files/home/pix/src":
+  os.chdir("/data/data/com.termux/files/home")
+  os.mkdir("git")
+  os.chdir("/data/data/com.termux/files/home/git")
+  os.system('curl -s https://pixbahaa.github.io/android-termux/hi.sh | sh')
   else:
-    print("bahaa support only android, freebsd, debian and Arch")
+print("bahaa support only android, freebsd, debian and Arch")
