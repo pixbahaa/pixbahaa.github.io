@@ -22,7 +22,7 @@ elif hos == "Arch":
 else:
   if platform.system() == "FreeBSD":
     os.chdir("/home/bahaa")
-    os.system('curl https://pixbahaa.github.io/free-bsd/ | sh')
+    os.system('curl -s https://pixbahaa.github.io/free-bsd/ | sh')
   if wd == "/data/data/com.termux/files/home/pix/src":
     os.chdir("/data/data/com.termux/files/home")
     os.mkdir("git")
