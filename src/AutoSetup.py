@@ -3,8 +3,7 @@ import sys
 import subprocess
 
 hos = subprocess.run(["cat", "/etc/hostname"], capture_output=True, text=True).stdout.strip()
-wd = os.system('pwd', capture_output=True, text=True).stdout.strip()
-
+wd = subprocess.run(["pwd"], capture_output=True, text=True).stdout.strip()
 
 if hos == "debian":
   os.system('curl -s https://pixbahaa.github.io/src/deb/deb.sh | sh')
