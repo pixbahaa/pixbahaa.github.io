@@ -15,6 +15,6 @@ makepkg -si --noconfirm
 cd ..
 rm -rf paru-bin
 
-mkdir -p /home/bahaa/.config/alacritty
+mkdir -p .config/alacritty
 cp alacritty.toml .config/alacritty/
 echo "exec dwm" > .xinitrc
