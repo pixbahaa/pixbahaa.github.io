@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd
 sudo pacman -Syu --noconfirm
 sudo pacman -S --noconfirm noto-fonts noto-fonts-emoji noto-fonts-extra ttf-noto-nerd
 sudo pacman -S --noconfirm xorg xorg-drivers xorg-xinit dwm alacritty dmenu base-devel zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting intel-ucode pulseaudio pavucontrol
