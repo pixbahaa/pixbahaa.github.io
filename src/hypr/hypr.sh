@@ -1,4 +1,4 @@
-#!/bin/bash
+#/bin/sh
 
 git clone --recursive https://github.com/hyprwm/Hyprland
 
