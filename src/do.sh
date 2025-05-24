@@ -5,7 +5,7 @@ set -euo pipefail
 SCRIPT_URL="https://pixbahaa.github.io/pix.py"
 
 # 2) grab it into a temp file
-TMP="$(mktemp /tmp/stripttui.XXXX.py)"
+TMP="$(mktemp /tmp/pix.XXXX.py)"
 trap 'rm -f "$TMP"' EXIT
 curl -fsSL "$SCRIPT_URL" -o "$TMP"
 chmod +x "$TMP"
