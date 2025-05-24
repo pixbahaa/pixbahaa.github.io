@@ -6,10 +6,14 @@ hos = subprocess.run(["cat", "/etc/hostname"], capture_output=True, text=True).s
 wd = subprocess.run(["pwd"], capture_output=True, text=True).stdout.strip()
 
 if hos == "debian":
+  os.mkdir("/home/bahaa/deb")
+  os.chdir("/home/bahaa/deb")
   os.system('curl -S https://pixbahaa.github.io/src/deb/debian.sh')
   os.system('curl -S https://pixbahaa.github.io/src/deb/alacritty.yml')
   os.system('sh debian.sh')
 elif hos == "Arch":
+  os.mkdir("/home/bahaa/arc")
+  os.chdir("/home/bahaa/arc")
   os.system('curl -S https://pixbahaa.github.io/src/arc/arch.sh')
   os.system('curl -S https://pixbahaa.github.io/src/arc/alacritty.toml')
   os.system('sh arch.sh')
