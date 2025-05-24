@@ -9,12 +9,15 @@ if [ -f /etc/os-release ]; then
     OS_TYPE=$ID
 elif [ "$(uname -s)" = "FreeBSD" ]; then
     OS_TYPE="freebsd"
+elif [ "$(pwd)" = "/data/data/com.termux/files/home" ]; then
+    OS_TYPE="android"
 else
     exit 1
 fi
 
 case "$OS_TYPE" in
     "freebsd")
+        alias python3="python3.11"
         curl -s https://pixbahaa.github.io/free-bsd/root.sh | sh
         doas pkg install -y python
         ;;
@@ -23,6 +26,9 @@ case "$OS_TYPE" in
         ;;
     "arch")
         sudo pacman -S --noconfirm python python-pip
+        ;;
+    "android")
+        pkg install -y python
         ;;
     *)
         exit 1
@@ -33,4 +39,6 @@ sleep 3
 
 mkdir pix
 cd pix
-curl -sO https://pixbahaa.github.io/pix.py
+curl -O https://pixbahaa.github.io/pix.py
+alias pix="cd pix && python3 pix.py
+echo "Done... Run the command pix"
