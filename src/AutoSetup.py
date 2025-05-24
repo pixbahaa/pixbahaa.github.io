@@ -1,5 +1,4 @@
 import os
-import sys
 import subprocess
 
 hos = subprocess.run(["cat", "/etc/hostname"], capture_output=True, text=True).stdout.strip()
@@ -21,9 +20,9 @@ elif hos == "Arch":
 
 
 else:
-  #if sys.platform == freebsd15 or freebsd14:
-  #  os.chdir("/home/bahaa")
-  #  os.system('curl https://pixbahaa.github.io/free-bsd/ | sh')
+  if platform.system() == "FreeBSD":
+    os.chdir("/home/bahaa")
+    os.system('curl https://pixbahaa.github.io/free-bsd/ | sh')
   if wd == "/data/data/com.termux/files/home/pix/src":
     os.chdir("/data/data/com.termux/files/home")
     os.mkdir("git")
