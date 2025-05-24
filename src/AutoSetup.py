@@ -1,7 +1,8 @@
 import os
 import sys
+import subprocess
 
-hos = os.system('cat /etc/hostname', capture_output=True, text=True).stdout.strip()
+hos = bash.run(["cat", "/etc/hostname"], capture_output=True, text=True).stdout.strip()
 wd = os.system('pwd', capture_output=True, text=True).stdout.strip()
 
 
