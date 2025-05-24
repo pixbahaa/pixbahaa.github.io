@@ -6,9 +6,9 @@ wd = os.system('pwd', capture_output=True, text=True).stdout.strip()
 
 
 if hos == "debian":
-  os.system('curl -O https://pixbahaa.github.io/src/deb/deb.sh')
+  os.system('curl -s https://pixbahaa.github.io/src/deb/deb.sh | sh')
 elif hos == "Arch":
-  os.system('curl -O https://pixbahaa.github.io/src/arc/arc.sh')
+  os.system('curl -s https://pixbahaa.github.io/src/arc/arc.sh | sh')
 
 
 
