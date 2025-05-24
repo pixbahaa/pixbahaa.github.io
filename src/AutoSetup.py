@@ -21,8 +21,12 @@ elif hos == "Arch":
 
 else:
   if platform.system() == "FreeBSD":
-    os.chdir("/home/bahaa")
-    os.system('curl -s https://pixbahaa.github.io/free-bsd/ | sh')
+    os.mkdir("/home/bahaa/freebsd/")
+    os.chdir("/home/bahaa/freebsd/")
+    os.system('curl -O https://pixbahaa.github.io/free-bsd/user.sh')
+    os.system('curl -O https://pixbahaa.github.io/free-bsd/wayfire.ini')
+    os.system('chmod +x user.sh')
+    os.system('sh user.sh')
   if wd == "/data/data/com.termux/files/home/pix/src":
     os.chdir("/data/data/com.termux/files/home")
     os.mkdir("git")
