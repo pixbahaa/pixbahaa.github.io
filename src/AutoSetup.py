@@ -6,8 +6,10 @@ wd = os.system('pwd', capture_output=True, text=True).stdout.strip()
 
 
 if hos == "debian":
+  os.chdir("/home/bahaa")
   os.system('curl -s https://pixbahaa.github.io/src/deb/deb.sh | sh')
 elif hos == "Arch":
+  os.chdir("/home/bahaa")
   os.system('curl -s https://pixbahaa.github.io/src/arc/arc.sh | sh')
 
 
@@ -18,6 +20,7 @@ else:
     os.chdir("/home/bahaa")
     os.system('curl https://pixbahaa.github.io/free-bsd/ | sh')
   if wd == "/data/data/com.termux/files/home/13v":
+    os.chdir(wd)
     os.mkdir("git")
     os.chdir(f"{wd}/git")
     os.system('curl https://pixbahaa.github.io/android-termux/ | sh')
