@@ -2,8 +2,9 @@ import curses
 import os
 import sys
 
-if sys.platform == freebsd15 or freebsd14:
-    os.system('alias python3=python3.11')
+#if sys.platform == freebsd15 or freebsd14:
+#    os.system('alias python3=python3.11')
+
 os.mkdir('src')
 prwd = os.system('pwd', capture_output=True, text=True).stdout.strip()
 
